@@ -69,14 +69,6 @@ std::ostream &operator<<(std::ostream &os, const Student &p) {
     return os;
 }
 
-// std::istream &operator >> (std::istream &in, Student &rhs){
-//     int *buff = new int;
-//     in >> buff;
-
-//     rhs = Mystring {buff};
-//     delete [] buff;
-//     return in;
-// }
 
 int menu(){
 
@@ -178,32 +170,6 @@ void modifyRecords(std::vector<Student> &vec) {
     vec.push_back(temp); // adding to vector
 }
 
-/*************************************************************************************************************/
-// // StackOverFlow Question - multiple answers
-
-// int delete_record(std::vector<Student> &vec){
-//     std::string myName;
-//     std::cout << "\nName of record to delete: " << std::endl;
-//     std::cin >> myName;
-
-//     auto iter = find_if(vec.begin(), vec.end(), [&](Student &s){ return s.get_first_name() == myName; }); 
-
-//      if (iter != vec.end()){
-//          vec.erase(iter); 
-//      } else 
-//          std::cout << "Student not found.." << std::endl;
-            
-
-//         if (s.get_first_name() != myName){
-//             std::cout << "Student not found.." << std::endl;
-//         } else
-//             return s.get_first_name() == myName;
-//         });
-
-//         if (iter != vec.end())
-//             vec.erase(iter);     
-// }
-
 void delete_record(std::vector<Student> &vec){
     std::string myName;
     std::cout << "\nName of record to delete: " << std::endl;
@@ -219,17 +185,6 @@ void delete_record(std::vector<Student> &vec){
         std::cout << "Student not found.." << std::endl;
     }
 }
-
-/*Or, in C++20:*/  
-// void delete_record(std::vector<Student> &vec){
-
-//   auto iter = std::remove_if(vec.begin(), vec.end(), [&](Student &s) { return s.get_first_name() == myName; });
-//
-//     erase_if(vec, [&](Student &s){ 
-//         return s.get_first_name() == myName; 
-//     }); 
-// }
-/*************************************************************************************************************/
 
 int main () {
     
